@@ -21,35 +21,46 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
+              <Link className="nav-link active" aria-current="page" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/about">
+              <Link className="nav-link" to="/about">
                 About
-              </a>
+              </Link>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/services">
+            {/*<li className="nav-item">
+              <Link className="nav-link" to="/services">
                 Services
-              </a>
-            </li>
+              </Link>
+            </li>*/}
             <li className="nav-item">
-              <a className="nav-link" href="/contact">
+              <Link className="nav-link" to="/contact">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
+          <form className="d-flex ms-auto" role="search">
+            <input
+              className="form-control me-2 search-input"
+              type="search"
+              placeholder="Search Polls"
+              aria-label="Search"
+            />
+            <button className="btn btn-outline btn-sm" style = {{backgroundColor: "gray",
+              color : "white"
+            }} type="submit">Search</button>
+          </form>
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link" href="/profile">
+              <Link className="nav-link" to="/profile">
                 Profile
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
                 <Link className="nav-link" to="/login">
-                Login
+                  Login
                 </Link>
             </li>
           </ul>

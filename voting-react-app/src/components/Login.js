@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -49,23 +50,23 @@ const LoginPage = () => {
                   />
                 </div>
                 <div className="d-grid">
-                    <button
-                        type="submit"
-                        className="btn btn-sm"
-                        style={{
-                        backgroundColor: '#343a40',
-                        color: 'white',
-                        padding: '8px 16px',
-                        borderRadius: '5px',
-                        }}
-                    >
+                      <button
+                          type="submit"
+                          className="btn btn-sm"
+                          style={{
+                          backgroundColor: '#343a40',
+                          color: 'white',
+                          padding: '8px 16px',
+                          borderRadius: '5px',
+                          }}
+                      >
                         Login
                     </button>
                 </div>
 
               </form>
               <div className="mt-3 text-center" style={{ color: '#343a40' }}>
-                <p>Don't have an account? <a href="/register" style={{ color: '#343a40' }}>Register here</a></p>
+                <p>Don't have an account? <Link to ="/register" style={{ color: '#343a40' }}>Register here</Link></p>
               </div>
             </div>
           </div>
